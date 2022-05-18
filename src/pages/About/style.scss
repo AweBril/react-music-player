@@ -1,0 +1,26 @@
+@import '../../app/styles/color';
+
+.about {
+  background-color: $base-color;
+  z-index: 3;
+
+  .content {
+    padding: 0 30px;
+    height: 100%;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin: 10px 0;
+    }
+  }
+
+  a {
+    color: $tertiary-font-color;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

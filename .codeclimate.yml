@@ -1,0 +1,14 @@
+ratings:
+  paths:
+    - "src/**/*.js"
+exclude_paths:
+  - "build"
+  - "config"
+  - "coverage"
+  - "node_modules"
+  - "public"
+  - "scripts"
+  - "src/**/*.spec.{js,jsx,mjs}"
+  - "src/app/data.js"
+  - "src/serviceWorker.js"
+  - "src/setupTests.js"

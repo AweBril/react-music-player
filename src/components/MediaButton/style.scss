@@ -1,0 +1,54 @@
+@import '../../app/styles/color';
+
+.media-button {
+  align-items: center;
+  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  border: 0;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  justify-content: center;
+  box-shadow: -1px 17px 24px -6px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  display: none;
+  cursor: pointer;
+  transition: box-shadow .1s, transform .1s;
+  position: relative;
+
+  &--active {
+    display: flex;
+    pointer-events: visible;
+  }
+
+  &:active {
+    position: relative;
+    transform: scale(0.95);
+    box-shadow: -1px 8px 24px -6px rgba(0, 0, 0, 0.2);
+  }
+
+  svg {
+    fill: $base-color;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    opacity: .01;
+    width: 100%;
+    height: 100%;
+    border: solid 2px $border-color;
+    border-radius: 50px;
+    transition: opacity .3s;
+    box-shadow: 0px 0px 0px 5px rgba(123, 177, 243, 0.43);
+    top: -2px;
+  }
+}
+
+.media-button:focus {
+  outline: 0;
+}
+
+.media-button:focus::before {
+  opacity: .57;
+}

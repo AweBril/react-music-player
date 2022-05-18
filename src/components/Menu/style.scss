@@ -1,0 +1,76 @@
+@import '../../app/styles/color';
+
+.menu {
+  background-color: $base-color;
+  color: $primary-font-color;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  z-index: 3;
+
+  .icon-button--close {
+    display: none;
+  }
+
+  .icon-button--back.active{
+    transition-delay: .1s;
+  }
+
+  &__title {
+    font-size: 18px;
+  }
+
+  &__title.active {
+    transition-delay: .2s;
+  }
+
+  .icon-button--help.active {
+    transition-delay: .4s;
+  }
+
+  .hidden {
+    transform: translateY(20px);
+    opacity: .001;
+    transition-property: transform, opacity;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  .active {
+    transition-duration: .3s, .2s;
+    transform: translateY(0);
+    opacity: .999;
+  }
+
+  &--home {
+    visibility: hidden;
+  }
+
+  &--about {
+    .icon-button--close{
+      display: block;
+    }
+
+    .icon-button--help {
+      display: none;
+    }
+
+    .menu__title, .icon-button--back {
+      visibility: hidden;
+    }
+  }
+
+  &--detail {
+    justify-content: flex-start;
+
+    .help {
+      visibility: hidden;
+    }
+
+    .menu__title {
+      width: 80%;
+      text-align: center;
+    }
+  }
+}
