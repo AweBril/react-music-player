@@ -7,5 +7,5 @@ services:
       - /app/node_modules
     working_dir: /app
     command: npm start
-    ports:
+    ports: 
       - 3000:3000
